@@ -2,8 +2,8 @@ module Main exposing (main)
 
 import Browser
 import Browser.Dom as Dom
-import Html exposing (Html, b, br, div, h2, input, span, text)
-import Html.Attributes exposing (id, size, style, value)
+import Html exposing (Html, a, b, br, div, h2, input, p, span, text)
+import Html.Attributes exposing (href, id, size, style, target, value)
 import Html.Events exposing (onInput)
 import PopupPicker exposing (PopupPicker)
 import Task
@@ -117,6 +117,14 @@ view : Model -> Html Msg
 view model =
     div [ style "margin" "4em" ]
         [ h2 [] [ text "PopupPicker Example" ]
+        , p []
+            [ text "See "
+            , a
+                [ href "https://github.com/billstclair/elm-popup-picker"
+                , target "blank_"
+                ]
+                [ text "github.com/billstclair/elm-popup-picker" ]
+            ]
         , b [] [ text "Number from 1 to 20: " ]
         , input
             [ size 5

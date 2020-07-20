@@ -40,7 +40,7 @@ initialPicker =
 
             -- Make sure your popup is on top of a dialog.
             -- Not really necessary for this example.
-            , style "z-index" "10"
+            , PopupPicker.zIndex 10
             ]
         , choiceAttributes =
             [ style "border" "1px solid green"

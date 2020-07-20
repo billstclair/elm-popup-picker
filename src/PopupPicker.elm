@@ -15,6 +15,7 @@ module PopupPicker exposing
     , makePopupPicker
     , view
     , position, top, left, bottom, right
+    , zIndex
     )
 
 {-| A popup <div> to pick from a list of choices.
@@ -38,9 +39,14 @@ description of the relevant CSS.
 @docs view
 
 
-# Generating `positionAttributes`.
+# Generating `positionAttributes`
 
 @docs position, top, left, bottom, right
+
+
+# Ensuring the popup is on top
+
+@docs zIndex
 
 -}
 
@@ -203,3 +209,15 @@ bottom x =
 right : String -> Attribute msg
 right x =
     style "right" x
+
+
+{-| Pass a larger integer than any other z-index to make the popup go on top.
+
+This usually goes in the `divAttributes` property of your `PopupPicker`.
+
+`zIndex index` -> `style "z-index" <| String.fromInt index`.
+
+-}
+zIndex : Int -> Attribute msg
+zIndex index =
+    style "z-index" <| String.fromInt index

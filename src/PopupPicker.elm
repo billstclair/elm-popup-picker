@@ -198,7 +198,7 @@ bottom x =
     style "bottom" x
 
 
-{-| `right x` -> \`style "right" x
+{-| `right x` -> `style "right" x`
 -}
 right : String -> Attribute msg
 right x =

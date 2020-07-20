@@ -3,7 +3,7 @@
     "name": "billstclair/elm-popup-picker",
     "summary": "A popup <div> to pick from a list of choices.",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "exposed-modules": [
         "PopupPicker"
     ],
